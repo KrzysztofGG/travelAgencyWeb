@@ -1,0 +1,54 @@
+img{
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    margin-top: 10px;
+}
+
+.container{
+    position: relative;
+    border-radius: 20px;
+    width: 450px;
+    /* height: 400px; */
+    height: fit-content;
+    text-align: center;
+
+    /* margin: 20px; */
+    background-color: rgba(102, 186, 214, 0.252);
+
+}
+/* .description{
+    white-space: nowrap; 
+    width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;  */
+/* } */
+.display-6{
+    font-size: 26px;
+    /* height: 10%; */
+    width: 100%;
+    font-weight: 500;
+}
+p{
+    margin: 0;
+    font-size: 18px;
+}
+.places, .reservations{
+    font-size: 22px;
+}
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: lightseagreen;
+    margin: 10px 0;
+}
+#payment{
+    width: 20px;
+    height: 20px;
+}
+#reservedNumber{
+    font-size: 28px;
+    font-weight: bold;
+    /* color: blue */
+}

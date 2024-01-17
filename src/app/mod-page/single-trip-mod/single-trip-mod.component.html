@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <form [formGroup]="tripForm" class="d-flex flex-column">
+        <div class="row">
+            
+            <div class="col-2">
+                <label for="tripName">Trip Name</label>
+                <input type="text" class="form-control" id="tripName"  formControlName="tripName">
+            </div>
+            <div class="col-2">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" formControlName="country">
+            </div>
+            <div class="col">
+                <label for="dateStart">Date Start</label>
+                <input type="date" class="form-control" id="dateStart" formControlName="dateStart">
+            </div>
+            <div class="col">
+                <label for="dateEnd">Date End</label>
+                <input type="date" class="form-control" id="dateEnd" formControlName="dateEnd">
+            </div>
+            <div class="col">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" formControlName="price">
+            </div>
+            <div class="col">
+                <label for="maxPlaces">Max Places</label>
+                <input type="number" class="form-control" id="maxPlaces" formControlName="maxPlaces">
+            </div>
+            <div class="col">
+                <label for="photoLink1">Photo Link 1</label>
+                <input type="url" class="form-control" id="photoLink1" formControlName="photoLink1">
+            </div>
+            <div class="col">
+                <label for="photoLink2">Photo Link 2</label>
+                <input type="url" class="form-control" id="photoLink2" formControlName="photoLink2">
+            </div>
+            <div class="col">
+                <label for="photoLink3">Photo Link 3</label>
+                <input type="url" class="form-control" id="photoLink3" formControlName="photoLink3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="description">description</label>
+                <textarea class="form-control" id="description" formControlName="description" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" class="btn btn-primary m-1" value="Submit" (click)="onSubmit()">
+            </div>
+            <div class="col d-flex justify-content-end">
+                <input type="submit" class="btn btn-danger m-1" value="Delete" (click)="onDelete()">
+            </div>
+        </div>
+
+
+        
+    </form>
+</div>

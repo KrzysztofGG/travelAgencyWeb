@@ -1,0 +1,13 @@
+<div class="container border border-3 border-info d-flex justify-content-center align-items-center">
+    <a routerLink="cart"><i class="fa fa-shopping-cart"></i></a>
+    
+    <div class="reservations border-end border-3 border-info"
+    [ngStyle]="{'background-color': cartService.getNumOfReservations() >= 10 ? 'green' : 'rgba(173, 216, 230, 0.56) '}">
+        Reservations: {{cartService.getNumOfReservations()}}
+    </div>
+    <div class="value">
+        Value: {{cartService.getValueOfReservations()}} PLN
+    </div>
+</div>
+
+<!-- <router-outlet></router-outlet>  -->

@@ -1,0 +1,83 @@
+<div class="container-fluid" *ngIf="trip != undefined">
+    <div class="row">
+        <div class="col wrapper">
+            <div class="d-flex align-items-center justify-content-between">
+              <header class="display-2">{{trip.name.toUpperCase()}}</header>
+              <a [routerLink]="['/trips']" routerLinkActive="active">
+                <button class="btn btn-large btn-warning">Return</button>
+              </a>
+            </div>
+            <header class="display-3">{{trip.country.toUpperCase()}}</header>
+            <header class="display-6 ">{{trip.description}}</header>
+            <div class="d-flex align-items-center">
+                <header class="display-6 mb-2 fw-bold">{{priceToShow}} {{selectedCurrency}}</header>
+                <select (ngModelChange)="onSelectChange($event)" [(ngModel)]="selectedCurrency" class="form-select form-select-sm">
+                    <option selected>PLN</option>
+                    <option>$</option>
+                    <option>&#8364;</option>
+                </select>
+            </div>
+            <div class="">
+                <app-trip-rating [readOnly]="true" [writeOnly]="false" [trip]="trip"></app-trip-rating>
+                <header class="display-6">Ratings: {{trip.ratings.length}}</header>
+            </div>
+            <div>
+                <div class="w-50 d-flex justify-content-start align-items-center">
+                  <p class="places" [ngStyle]="{'color': trip.availablePlaces > 3 ? 'green' : 'orange'}" *ngIf="trip.availablePlaces > 0">places left: <span id="reservedNumber">{{trip.availablePlaces}}</span></p>
+                  <p *ngIf="trip.availablePlaces == 0" class="text-danger places">booked out</p>
+                  <button class="btn btn-primary" (click)="onPlusClick()" [disabled]="trip.availablePlaces == 0">+</button>
+                  <button class="btn btn-danger" (click)="onMinusClick()" [disabled] = "trip.availablePlaces == 0 || trip.availablePlaces == trip.maxPlaces ? 'disabled' : null">-</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col ms-1 wrapper">
+            <header class="display-5">Trip location</header>
+            <iframe class="m-2" [src]="getCountrySource()" width="800" height="650"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center wrapper mt-1 ">
+        <header class="display-3 text-center mb-2 d-none d-sm-block">Some photos</header>
+
+    <div id="carouselExampleIndicators" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- <div *ngFor="let photo of trip.imageSources" class="carousel-item">
+                <img [src]="photo" class="d-block w-100" alt="...">
+            </div> -->
+          <div class="carousel-item active">
+            <img [src]="trip.imageSources[0]" class="d-block w-100" alt="trip image 1">
+          </div>
+          <div class="carousel-item">
+            <img [src]="trip.imageSources[1]" class="d-block w-100" alt="trip image 2">
+          </div>
+          <div class="carousel-item">
+            <img [src]="trip.imageSources[2]" class="d-block w-100" alt="trip image 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+            <app-reviews [trip]="trip"></app-reviews>
+    </div>
+
+<div class="container-fluid" *ngIf="trip == undefined">
+  <header class="display-3"></header>
+  <a routerLink="trips">
+    <button class="btn btn-warning">Return</button>
+  </a>
+</div>
+

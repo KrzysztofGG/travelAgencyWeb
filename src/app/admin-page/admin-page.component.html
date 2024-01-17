@@ -1,0 +1,4 @@
+<header class="display-4 m-1">Manage Users</header>
+<div class="row user w-50" *ngFor="let user of userService.users">
+    <app-single-user [user]="user"></app-single-user>
+</div>

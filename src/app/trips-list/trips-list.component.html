@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="position-relative">
+        <header class=" w-50 display-6 d-flex justify-content-center align-items-center mx-auto "
+        [ngStyle]="{'background-color': cartService.getNumOfReservations() >= 10 ? 'green' : 'red'}">Current reservations: {{cartService.getNumOfReservations()}}</header>
+        
+    </div>
+    <!-- <app-trip-filter [countries]="tripsService.getCountries()" (notifyFilter)="handleFilters($event)"></app-trip-filter> -->
+    <app-trip-filter [countries]="tripsService.getCountries()" (notifyFilter)="handleFilters($event)"></app-trip-filter>
+
+        <nav aria-label="Page navigation example" >
+            <div class="d-flex justify-content-center align-items-center m-1">
+                <label for="rating">page size: </label>
+                <select class="form-control m-1" id="rating" (click)="changePageSize($event.target)">
+                    <option class="border" value="3">3</option>
+                    <option class="border" value="5" selected>5</option>
+                    <option class="border" value="10">10</option>
+                    <option class="border" value="25">25</option>
+                    <option class="border" value="50">50</option>
+                </select>
+                <ul class="pagination justify-content-center m-1">
+                        <li class="page-item" (click)="changePage(currentPage-1)">
+                            <a class="page-link" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                      
+                        <li *ngFor="let item of [].constructor(numOfPages); let i = index" class="page-item" (click)="changePage(i)">
+                            <a class="page-link" >{{i+1}}</a>
+                        </li>
+
+                        <li class="page-item"  (click)="changePage(currentPage+1)">
+                            <a class="page-link"  aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+
+    
+        <div class="row" >
+            <div class="col d-flex justify-content-center align-items-center" *ngFor="let trip of (tripsToShow)">
+                <app-single-trip [trip]="trip" (notifyDelete)="onDelete($event)"></app-single-trip>
+            </div>
+        </div>
+
+</div>

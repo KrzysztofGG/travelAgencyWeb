@@ -1,0 +1,27 @@
+.review{
+    /* background-color: rgba(109, 235, 214, 0.39);
+    border-radius: 10px; */ 
+    /* border: 1px solid black; */
+    box-shadow: 0 0 1px 2px lightblue;
+    position: relative;
+}
+.small{
+    font-size: 26px;
+}
+.smaller{
+    font-size: 22px;
+    
+    word-wrap: break-word
+}
+
+#delete{
+    position: absolute;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+    font-size: 12px;
+}

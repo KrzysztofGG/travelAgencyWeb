@@ -1,0 +1,90 @@
+
+<div class="container-fluid my-1 ">
+    <div class="row" *ngIf="historyService.tripInDays !== -1">
+        <p class="col daysinfo border border-3 border-success m-1 text-danger d-flex justify-content-center">You have {{historyService.nearestTrip.name | uppercase}} in {{historyService.tripInDays}} days</p>
+    </div>
+    <div class="row d-flex justify-content-between">
+
+            <p class="col d-inline-flex align-items-center">PURCHASE HISTORY:</p>
+
+            <div class="col d-inline-flex align-items-center">
+                <label for="archival-checkbox" class="archival"> ARCHIVAL </label>
+                <input id="archival-checkbox" class=" ms-1" type="checkbox" (change)="updateFilters(-1, $event)">
+            </div>
+            <div class="col d-inline-flex align-items-center">
+
+                <label for="ongoing-checkbox" class="ongoing"> ONGOING </label>
+                <input id="ongoing-checkbox" class="ms-1" type="checkbox" (change)="updateFilters(0, $event)" checked>
+            </div>
+            <div class="col d-inline-flex align-items-center">
+
+                <label for="future-checkbox" class="future"> FUTURE </label>
+                <input id="future-checkbox" class="ms-1" type="checkbox" (change)="updateFilters(1, $event)" checked>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col" *ngIf="historyService.purchaseHistory.length > 0; else elseBlock">
+                <div class=" mt-1"  *ngFor="let item of historyService.purchaseHistory">
+                    <div *ngIf="shouldShow(item.state)" class="trip-ticket">
+
+                    <div class="container border border-primary d-flex flex-column justify-content-around align-items-center">
+                        <div class="row">
+                            <div class="col-7">
+                    
+                                <img src={{item.trip.imageSources[0]}} alt="trip photo">
+                                <div class="w-100 ">
+                                    <div class=" mb-1">
+                                        <p class="places">Bought places <span id="reservedNumber">{{item.quantity}}</span></p>
+                                        
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 d-flex flex-column justify-content-start align-items-center">
+                                <header class="display-6 mb-2">{{item.trip.name | uppercase}}</header>
+                                <div class="w-100 d-flex justify-content-around ">
+                                    <p class="mb-1">{{item.trip.country | uppercase }}</p>
+                                    <p class="mb-1">{{item.trip.price}} PLN</p>
+                                </div>
+                                <p class="mb-1"><i class="fa fa-calendar"></i> {{item.trip.dateStart}}-{{item.trip.dateEnd}}</p>
+                                <p class="places">Bought on <span id="reservedNumber">{{item.purchaseDate}}</span></p>
+
+
+                            </div>
+                    
+                        </div>
+                        <div class="row">
+                            <p class="mb-1">{{item.trip.description}}</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="row">
+                            <div class="col mb-2">
+                                <ng-container  *ngIf="item.state === 1; else present">
+                                    <p class="places">trip state: waiting on start</p>
+                                </ng-container>
+                                <ng-template #present>
+                                    <ng-container class="text-primary" *ngIf="item.state === 0;else future">
+                                        <p class="places text-primary">trip state: ongoing</p>
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #future>
+                                    <p class="places text-warning">trip state: finished</p> 
+                                </ng-template>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <ng-template #elseBlock>
+                <div class="col buy border border-3 border-success m-1 text-success d-flex justify-content-center">
+                    No items in purchase History
+                </div>
+            </ng-template>
+    </div>
+
+        
+</div>

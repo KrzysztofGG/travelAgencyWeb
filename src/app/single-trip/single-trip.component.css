@@ -1,0 +1,76 @@
+img{
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    margin-top: 10px;
+}
+img:hover{
+    box-shadow: 0 0 1px 3px lightblue;
+}
+#delete{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: auto;
+    font-size: 12px;
+}
+.container{
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    height: 460px;
+    text-align: center;
+
+    margin: 20px;
+    background-color: rgba(102, 186, 214, 0.252);
+
+}
+.display-6{
+    font-size: 26px;
+    /* height: 10%; */
+    width: 100%;
+    font-weight: 500;
+}
+p{
+    margin: 0;
+    font-size: 18px;
+    /* height: 10%; */
+    /* align-self: center; */
+}
+.description{
+    white-space: nowrap; 
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+button{
+    width: 50px;
+    height: 35px;
+    /* padding: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 30px; */
+}
+.places{
+    font-size: 22px;
+}
+#reservedNumber{
+    font-size: 28px;
+    font-weight: bold;
+}
+.form-select{
+    width: 70px;
+}
+.expensive{
+    border: 4px solid red;
+}
+.cheap{
+    border: 4px solid green;
+}
+
+.basic{
+    border: 2px solid rgb(31, 151, 191);
+}

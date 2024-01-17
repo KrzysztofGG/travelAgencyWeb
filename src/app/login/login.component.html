@@ -1,0 +1,22 @@
+<div class="container-fluid d-flex justify-content-center">
+    <div class="wrapper d-flex flex-column justify-content-center align-items-center">
+
+        <header class="display-6">Login</header>
+        <form [formGroup]="loginForm" *ngIf="!authService.isLoggedIn">
+            
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" formControlName="username">
+            
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control mb-1" id="password" formControlName="password">
+            
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            <p *ngIf="isLoginFailed" class="alert alert-danger mt-1">Invalid Data!</p>
+            <!-- <p *ngIf="showOk" style="color: green" >Logged In!</p> -->
+        </form>
+
+        <div class="alert alert-success mt-1" *ngIf="authService.isLoggedIn">
+            Logged in as {{ roles }}
+        </div>
+    </div>
+</div>

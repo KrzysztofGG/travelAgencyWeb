@@ -1,0 +1,46 @@
+<div class="container border border-primary d-flex flex-column justify-content-around align-items-center">
+    <div class="row">
+        <div class="col">
+
+            <img src={{trip.imageSources[0]}} alt="trip photo">
+
+        </div>
+        <div class="col">
+            
+            <header class="display-6">{{trip.name | uppercase}}</header>
+            <div class="w-100 d-flex justify-content-around">
+                <p>{{trip.country | uppercase }}</p>
+                <p>{{trip.price}} PLN</p>
+            </div>
+            <p><i class="fa fa-calendar"></i> {{trip.dateStart}}-{{trip.dateEnd}}</p>
+            <div class="w-100 ">
+                <div class="d-flex justify-content-around align-items-center mb-1">
+                    <p class="places" [ngStyle]="{'color': trip.availablePlaces > 3 ? 'green' : 'orange'}" *ngIf="trip.availablePlaces > 0">
+                        places left: <span id="reservedNumber">{{trip.availablePlaces}}</span></p>
+                    <p *ngIf="trip.availablePlaces == 0" class="text-danger places">booked out</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="row">
+        <p class="description">{{trip.description}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-around align-items-center mb-1">
+                <p class="reservations me-1">Currently reserved: <span class="text-primary" id="reservedNumber">{{cartService.getQuantityOfTrip(trip)}}</span></p>
+                <button class="btn btn-primary me-1" (click)="onAddClick()" *ngIf="trip.availablePlaces > 0">Add</button>
+                <button class="btn btn-danger" (click)="onRemoveClick()">Remove</button>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <label class="reservations" for="payment">Included in payment</label>
+                <input class="form-check-input ms-1" type="checkbox" id="payment" [checked]="includedInPayment" (click)="changePaymentInclusion($event.target)">
+            </div>
+        </div>
+
+    </div>
+</div>

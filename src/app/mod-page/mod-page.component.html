@@ -1,0 +1,16 @@
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-sm-12 col-md-8">
+        <header class="display-4">Manage Users</header>
+        <div class="trip" *ngFor="let trip of tripsService.trips">
+            <app-single-trip-mod [trip]="trip"></app-single-trip-mod>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <header class="display-4">Add trip</header>
+        <app-trip-adder></app-trip-adder>
+    </div>
+</div>
+
+</div>

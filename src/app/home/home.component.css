@@ -1,0 +1,27 @@
+.container-fluid{
+    background-color: rgba(109, 235, 214, 0.39);
+    height: 100vh;
+}
+header{
+    margin: 5px 10px;
+}
+.bold{
+    font-weight: bold;
+}
+.wrapper{
+    background-color: rgba(245, 245, 220, 0.54);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+}
+p, i    {
+    margin: 0 10px; 
+    font-weight: bold;
+}

@@ -1,0 +1,39 @@
+.container-fluid{
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+img{
+    height: 500px;
+}
+.carousel{
+    height: 500px;
+    width: 80%;
+}
+
+.wrapper{
+    background-color: rgba(109, 235, 214, 0.39);
+    border-radius: 10px;
+}
+.places{
+    font-size: 40px;
+}
+.places, .btn-primary, .btn-danger{
+    margin: 0 5px;
+}
+.btn-primary, .btn-danger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px 15px; */
+    width: 40px;
+    /* height: 30px; */
+}
+.btn-warning{
+    font-size: 30px;
+}
+.form-select{
+    width: 70px;
+}
+div{
+    /* margin: 0; */
+}

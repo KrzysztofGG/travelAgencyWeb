@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-6 col-md-3 d-flex flex-column justify-content-center">
+        <header class="display-6 "> user's credentials</header>
+    </div>
+    <div class="col-sm-6 col-md-3 d-flex flex-column justify-content-center">
+        <p>username: {{user.username}}</p>
+        <p>email: {{user.email}}</p>
+    </div>
+    <div class="col-sm-6 col-md-3 d-flex align-items-center">
+        <header class="display-6">Choose {{user.username}}'s roles</header>
+    </div>
+    <div class="col-sm-6 col-md-3 d-flex flex-column justify-content-center">
+        <form [formGroup]="updateForm" class="d-flex flex-column">
+            
+            <div class="d-flex">
+                <label for="user" class="">User</label>
+                <input type="checkbox" class="ms-1" id="user" formControlName="user">
+            </div>
+
+            <div class="d-flex">
+                <label for="moderator" class="">Moderator</label>
+                <input type="checkbox" class="ms-1" id="moderator" formControlName="moderator">
+            </div>
+
+            <div class="d-flex">
+                <label for="admin" class="">Admin</label>
+                <input type="checkbox" class="ms-1" id="admin" formControlName="admin">
+            </div>
+            <div class="d-flex">
+                <label for="isBanned" class="text-danger">Banned</label>
+                <input type="checkbox" class="ms-1" id="isBanned" formControlName="isBanned">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+
+        </form>
+    </div>
+</div>
+</div>

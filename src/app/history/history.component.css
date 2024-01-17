@@ -1,0 +1,60 @@
+img{
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    margin-top: 10px;
+}
+input{
+        width: 20px;
+        height: 20px;
+}
+.container{
+    position: relative;
+    border-radius: 20px;
+    width: 450px;
+    /* height: ; */
+    height: fit-content;
+    text-align: center;
+
+    /* margin: 20px; */
+    background-color: rgba(102, 186, 214, 0.252);
+
+}
+.container-fluid{
+    /* background-color: rgba(109, 235, 214, 0.39); */
+    background-color: rgba(245, 245, 220, 0.54);
+    border-radius: 10px;
+    height: 100vw;
+}
+.display-6{
+    font-size: 26px;
+    /* height: 10%; */
+    width: 100%;
+    font-weight: 500;
+}
+p{
+    margin: 0;
+    font-size: 18px;
+}
+.buy{
+    font-size: 28px;
+}
+.daysinfo{
+    font-size: 24px;
+}
+.places {
+    font-size: 22px;
+    color: green;
+}
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: lightseagreen;
+    margin: 10px 0;
+}
+
+#reservedNumber{
+    font-size: 28px;
+    font-weight: bold;
+    /* color: blue */
+}

@@ -1,0 +1,15 @@
+.rating-list li{
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 5px;
+}
+.rating-list li.selected {
+    color: #ffd700;
+}
+.wrapper{
+    background-color: lightseagreen;
+    width: 190px;
+    height: 70px;
+    /* height: 100%; */
+    border-radius: 10px;
+}

@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "name": "Balkans trip",
+        "country": "Croatia",
+        "dateStart": "16/06/2024",
+        "dateEnd": "26/06/2024",
+        "price": 500,
+        "maxPlaces": 2,
+        "availablePlaces": 2,
+        "description": "Trip to Croatia, during which you can swim and eat",
+        "imageSources": [
+            "https://notaboutthemiles.com/wp-content/uploads/2022/12/View-of-Split-Croatia-1024x629.jpg",
+            "https://www.travelandleisure.com/thmb/J0JlieumRs7xFzbnOYrH5lY4YTo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Zlatni-Rat-Beach-CROATIA0316-277e5a2d83b9425eb72d3188ac5d1eb6.jpg",
+            "https://travellemming.com/wp-content/uploads/Hvar-Croatia-Archipelago.jpg"
+        ],
+        "ratings": [3, 5, 4, 5, 3, 2],
+        "reviews": []
+    },
+    {
+        "id": 2,
+        "name": "Beautiful Scandinavia",
+        "country": "Norway",
+        "dateStart": "01/12/2023",
+        "dateEnd": "15/02/2024",
+        "price": 4000,
+        "maxPlaces": 15,
+        "availablePlaces": 15,
+        "description": "Trip to see snow and Reindeers",
+        "imageSources": [
+            "https://media.timeout.com/images/105237855/750/422/image.webp",
+            "https://media.timeout.com/images/105237855/750/422/image.webp",
+            "https://media.timeout.com/images/105237855/750/422/image.webp"
+        ],
+        "ratings": [3, 5, 4, 5, 3, 2, 1, 1, 1],
+        "reviews": []
+    },
+    {
+        "id": 3,
+        "name": "Tropical Paradise Getaway",
+        "country": "Maldives",
+        "dateStart": "15/03/2023",
+        "dateEnd": "30/03/2023",
+        "price": 8000,
+        "maxPlaces": 10,
+        "availablePlaces": 8,
+        "description": "Escape to the breathtaking tropical paradise of Maldives and immerse yourself in the crystal-clear waters and white sandy beaches. This trip promises a rejuvenating experience like no other.",
+        "imageSources": [
+            "https://media.architecturaldigest.com/photos/6032b337b526975f5405e0a0/16:9/w_1920,c_limit/Hero_Soneva%20Jani%20Chapter%20Two%20by%20Aksham%20Abdul%20Ghadir.jpg",
+            "https://media.architecturaldigest.com/photos/6032b48cbf094ba89d9fc303/master/w_1600,c_limit/Patina%20Maldives,%20Fari%20Islands%20-%20Aerial%20Shot%20(HR).jpg",
+            "https://media.architecturaldigest.com/photos/6032b3f876845000e3da8f22/master/w_1600,c_limit/Iridium%20Room%20and%20Spa%20Treatment%20Rooms.jpg"
+        ],
+        "ratings": [5, 4, 5, 2, 1],
+        "reviews": []
+    },
+      
+    {
+        "id": 4,
+        "name": "Journey Through Ancient Rome",
+        "country": "Italy",
+        "dateStart": "10/05/2023",
+        "dateEnd": "25/05/2023",
+        "price": 5500,
+        "maxPlaces": 20,
+        "availablePlaces": 18,
+        "description": "Embark on a historical adventure through the heart of Italy, exploring the ancient ruins of Rome, indulging in delicious Italian cuisine, and immersing yourself in the rich cultural heritage that awaits.",
+        "imageSources": [
+          "https://www.fodors.com/wp-content/uploads/2018/10/2_UltimateRome_TheColosseum.jpg",
+          "https://www.fodors.com/wp-content/uploads/2018/10/3_UltimateRome_Pantheon.jpg",
+          "https://www.fodors.com/wp-content/uploads/2018/10/4_UltimateRome_PiazzaNavona.jpg"
+        ],
+        "ratings": [4, 5, 5, 4, 3],
+        "reviews": []
+    },
+      
+    {
+        "id": 5,
+        "name": "Amazon Rainforest Expedition",
+        "country": "Brazil",
+        "dateStart": "02/08/2023",
+        "dateEnd": "18/08/2023",
+        "price": 6000,
+        "maxPlaces": 12,
+        "availablePlaces": 10,
+        "description": "Embark on an exhilarating adventure deep into the heart of the Amazon rainforest. Explore diverse ecosystems, encounter unique wildlife, and experience the wonders of one of the world's most biodiverse regions.",
+        "imageSources": [
+          "https://mongabay-images.s3.amazonaws.com/rainforests/photos/amazon_rainforest_peru_166228_960.webp",
+          "https://mongabay-images.s3.amazonaws.com/rainforests/photos/amazon_200260-960.webp",
+          "https://cff2.earth.com/uploads/2023/02/15124958/Amazon-animals-2-960x640.jpg"
+        ],
+        "ratings": [5, 4, 3, 4, 1, 1],
+        "reviews": []
+    },
+    {
+        "id": 6,
+        "name": "Tokyo City Lights Spectacle",
+        "country": "Japan",
+        "dateStart": "20/09/2023",
+        "dateEnd": "05/10/2023",
+        "price": 7000,
+        "maxPlaces": 15,
+        "availablePlaces": 14,
+        "description": "Immerse yourself in the vibrant energy and futuristic landscapes of Tokyo. From bustling city streets to serene temples, this trip promises an unforgettable exploration of Japan's capital city.",
+        "imageSources": [
+          "https://hips.hearstapps.com/hmg-prod/images/gettyimages-164026426-1663760068.jpg?crop=1.00xw:0.980xh;0,0.0178xh&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1664189513.jpg?crop=1xw:0.9995119570522205xh;center,top&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/gettyimages-893546990-1664198796.jpg?crop=1xw:0.9990570485619991xh;center,top&resize=980:*"
+        ],
+        "ratings": [5, 4, 5, 4, 3, 5, 4],
+        "reviews": []
+    },
+    {
+        "id": 7,
+        "name": "Mystical Temples of Angkor Wat",
+        "country": "Cambodia",
+        "dateStart": "03/03/2024",
+        "dateEnd": "18/03/2024",
+        "price": 7000,
+        "maxPlaces": 16,
+        "availablePlaces": 14,
+        "description": "Uncover the mysteries of the ancient temples of Angkor Wat. Delve into the rich history and architectural marvels of Cambodia, surrounded by the awe-inspiring beauty of these UNESCO World Heritage sites.",
+        "imageSources": [
+          "https://media.architecturaldigest.com/photos/5c86b18afd05a62d5ad0995d/16:9/w_1920,c_limit/GettyImages-640432454.jpg",
+          "https://www.travelmanagers.com.au/wp-content/uploads/2013/02/Dollarphotoclub_60286741_AngkorWay-Cambodia-blog.jpg",
+          "https://www.experiencetravelgroup.com/blog/wp-content/uploads/2022/12/Dollarphotoclub_73953575-2-1920x1278.jpg"
+        ],
+        "ratings": [5, 4, 5, 3, 4, 5],
+        "reviews": []
+    },
+    {
+        "id": 8,
+        "name": "Trekking in the Himalayas",
+        "country": "Nepal",
+        "dateStart": "05/12/2024",
+        "dateEnd": "20/12/2024",
+        "price": 6000,
+        "maxPlaces": 15,
+        "availablePlaces": 13,
+        "description": "Embark on a thrilling adventure through the majestic Himalayan mountains. Trek to breathtaking heights, witness panoramic views, and experience the unique culture of the Nepalese people.",
+        "imageSources": [
+          "https://media.architecturaldigest.com/photos/5e2b544267cbaa0008880345/16:9/w_1920,c_limit/GettyImages-641893830.jpg",
+          "https://www.telegraph.co.uk/content/dam/Travel/leadAssets/35/50/nepal-village_3550720a.jpg?imwidth=1280",
+          "https://www.planetware.com/wpimages/2019/12/nepal-in-pictures-beautiful-places-to-photograph-annapurna-range.jpg"
+        ],
+        "ratings": [5, 4, 5, 3, 1, 1, 2],
+        "reviews": []
+    },
+    {
+        "id": 9,
+        "name": "Magical Winter in Lapland",
+        "country": "Finland",
+        "dateStart": "15/01/2024",
+        "dateEnd": "01/02/2024",
+        "price": 5000,
+        "maxPlaces": 20,
+        "availablePlaces": 18,
+        "description": "Experience the enchanting winter wonderland of Lapland. From the mesmerizing Northern Lights to the thrill of husky sledding, this journey promises a magical escape into the heart of winter's beauty.",
+        "imageSources": [
+            "https://cdn.outsideonline.com/wp-content/uploads/2023/03/finland-lead-h.jpg?crop=16:9&width=960&enable=upscale&quality=100",
+          "https://www.visitfinland.com/.imaging/mte/visit-finland-theme/xlUpW/dam/vf/Lapland/Finland_Aurora_dome_Jeris_Antti_Pietika-inen.12422788202013340987_optimized.jpg/jcr:content/Finland_Aurora_dome_Jeris_Antti_Pietik%C3%A4inen.12422788202013340987_optimized.jpg",
+          "https://www.travelandleisure.com/thmb/guXriXzV7Otspb1adToj2YH550A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-finland-northern-lights-WHENFINLAND0823-2941fd488ca648769b9a3c5be5d513f3.jpg"
+        ],
+        "ratings": [5, 4, 5, 3, 4, 5, 4],
+        "reviews": []
+    },
+    {
+        "id": 10,
+        "name": "Wildlife Safari in Kenya",
+        "country": "Kenya",
+        "dateStart": "08/11/2023",
+        "dateEnd": "23/11/2023",
+        "price": 7500,
+        "maxPlaces": 15,
+        "availablePlaces": 12,
+        "description": "Embark on an exciting wildlife safari in the heart of Kenya. Witness the majestic animals in their natural habitat, from lions and elephants to giraffes and zebras. An adventure for nature enthusiasts!",
+        "imageSources": [
+          "https://www.travelandleisure.com/thmb/hp0sQkcvv-Wlz9p51c2FZIQGFe8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/safari-truck-giraffes-micato-safaris-SAFARIGUIDETIPS0721-2549bb165aa34dc193cb8b6f3958654b.jpg",
+          "https://www.travelandleisure.com/thmb/VnKOar7FdteUVw_rRA_GXnn8mBE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lions-micato-safaris-SAFARIGUIDETIPS0721-9587342c944d41adb4838b11258812e5.jpg",
+          "https://ik.imagekit.io/aventure/wp-content/uploads/Elephants-and-Kilimanjaro-for-AV.jpeg"
+        ],
+        "ratings": [4, 5, 3, 4, 5, 4],
+        "reviews": []
+    }
+]

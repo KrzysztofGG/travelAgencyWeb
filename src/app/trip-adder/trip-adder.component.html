@@ -1,0 +1,48 @@
+<form class="" [formGroup]="formData" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="name">Trip name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" required>
+    </div>
+    <div class="form-group">
+      <label for="country" >Country</label>
+      <input type="text" class="form-control" id="country" formControlName="country" required>
+    </div>
+    <div class="form-group">
+      <label for="dateStart">Start date</label>
+      <input type="date" class="form-control" id="dateStart" formControlName="dateStart" required>
+    </div>
+    <div class="form-group">
+      <label for="dateEnd">End date</label>
+      <input type="date" class="form-control" id="dateEnd" formControlName="dateEnd" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price" required>
+    </div>
+    <div class="form-group">
+      <label for="maxPlaces">Max places</label>
+      <input type="number" class="form-control" id="maxPlaces" formControlName="maxPlaces" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" formControlName="description" rows="3"></textarea>
+    </div>
+    <!-- <div class="form-group">
+      <label for="photoUrl">Photo link</label>
+      <input type="text" class="form-control" id="photoUrl" formControlName="photoUrl" required>
+    </div> -->
+    <div class="form-group">
+      <label for="photoUrl1">Photo link 1</label>
+      <input type="url" class="form-control" id="photoUrl1" formControlName="photoUrl1" required>
+    </div>
+    <div class="form-group">
+      <label for="photoUrl2">Photo link 2</label>
+      <input type="url" class="form-control" id="photoUrl2" formControlName="photoUrl2" required>
+    </div>
+    <div class="form-group">
+      <label for="photoUrl3">Photo link 3</label>
+      <input type="url" class="form-control" id="photoUrl3" formControlName="photoUrl3" required>
+    </div>
+
+    <button class="btn btn-primary my-2">Submit</button>
+  </form>

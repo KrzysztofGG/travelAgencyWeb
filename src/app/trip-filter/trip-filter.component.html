@@ -1,0 +1,53 @@
+
+    <div class="container-fluid bg-info d-flex justify-content-around mt-2">
+        <div class="row">
+        <div class="col d-inline-flex align-items-center">
+            <label for="minPrice">Min price</label>
+            <input type="number" class="mx-3 form-control" id="minPrice" (change)="onChange($event.target)">
+        </div>
+        <div class="col d-inline-flex align-items-center">
+            <label for="maxPrice" >Max price</label>
+            <input type="number" class=" mx-3 form-control" id="maxPrice" (change)="onChange($event.target)">
+        </div>
+
+        <div class="col d-inline-flex align-items-center">
+            <label for="dateStart">Date start</label>
+            <input type="date" class="me-3 form-control" id="dateStart" (change)="onChange($event.target)">
+        </div>
+        <div class="col d-inline-flex align-items-center">
+            <label for="dateEnd">Date end</label>
+            <input type="date" class="me-3 form-control " id="dateEnd" (change)="onChange($event.target)">
+        </div>
+        <div class="col  d-inline-flex align-items-center">
+            <label for="rating">Rating, use Ctrl for multiple</label>
+            <select class="my-2 me-2 form-control d-inline-flex align-items-center" id="rating" multiple (change)="onChange($event.target)">
+                <option class="border" value="1">&#11088;</option>
+                <option class="border" value="2">&#11088;&#11088;</option>
+                <option class="border" value="3">&#11088;&#11088;&#11088;</option>
+                <option class="border" value="4">&#11088;&#11088;&#11088;&#11088;</option>
+                <option class="border" value="5">&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+                <!-- <option class="border" *ngFor="let number of [1, 2, 3, 4, 5]" 
+                    [value]="number"><div *ngFor="let i of Arr(number).fill('&#11088;')"></div></option> -->
+            </select>
+        </div>
+
+        <div class="col d-inline-flex align-items-center">
+            <label for="countries">Country, use Ctrl for multiple</label>
+            <select class="my-2  form-control d-inline-flex align-items-center" id="countries" multiple (change)="onChange($event.target)">
+                <option class="border" *ngFor="let country of countries" 
+                    [value]="country">{{country}}</option>
+            </select>
+        </div>
+        <div class="col d-inline-flex align-items-center">
+            <!-- <input type="submit" >Clear</input> -->
+            <input class="form-control btn btn-primary" type="submit" value="Clear" id="clear" (click)="onChange($event.target)">
+        </div>
+    </div>
+    </div>
+
+    <!-- <script>
+        $('select option').on('mousedown', function (e) {
+    this.selected = !this.selected;
+    e.preventDefault();
+});
+    </script> -->

@@ -1,0 +1,62 @@
+<div class="container-fluid mt-1">
+    <div class="row ">
+        <div class="col">
+            <header class="display-6 text-center">Add a review for {{trip.name}}</header>
+            <form (ngSubmit)="onSubmit()" #reviewForm="ngForm">
+
+                  <div class="form-group mb-1 d-flex align-items-center">
+                    <label for="nick">Nick: </label>
+                    <input type="text" class="form-control ms-1" id="nick" name="nick" 
+                    placeholder="RickDeckard" minlength="3" maxlength="20" size="20" pattern="^\S+$" required ngModel #nick="ngModel">
+                  </div>
+                  <div><small *ngIf="nick.invalid && nick.touched" class="text-danger">
+                    Nick must be between 3-20 characters and cannot contain spaces
+                  </small></div>
+
+                  <div class="form-group mb-1 d-flex align-items-center">
+                      <label for="rating" class="me-1">Rate the trip:</label>
+                      <app-trip-rating [writeOnly]="true" [trip]="trip" (ratingChosen)="updateRating($event)"></app-trip-rating>
+                  </div>
+
+                  <div class="form-group mb-1 d-flex align-items-center">
+                    <label for="date">Trip start date:</label>
+                    <input type="date" class="form-control" id="date" name="date" ngModel>
+                </div>
+
+                  <div class="form-group mb-1 d-flex align-items-center">
+                      <textarea id="description" rows="4" class="form-control"  minlength="10" maxlength="500" name="description"
+                      placeholder="Write your review here..." required ngModel #description="ngModel"></textarea>
+                  </div>
+                  <div><small *ngIf="description.invalid && description.touched" class="text-danger">
+                    Review must be between 10-500 characters
+                  </small></div>
+                  <!-- <input type="submit" value="Post" class="form-control" id="btn"> -->
+                  <div *ngIf="reviewFailure" class="alert alert-danger mt-1"> {{ errMessage }}</div>
+                  <div class="alert alert-danger mt-1" *ngIf="authService.isBanned">Can't post reviews, you are banned</div>
+                  <button type="submit" class="btn btn-primary mb-1" [disabled]="authService.isBanned">Submit</button>
+
+            </form>
+        </div>
+        
+        <div class="col">
+            <header class="display-6 text-center">Reviews of {{trip.name}}</header>
+            <div *ngFor="let review of trip.reviews" class="review mt-1 mb-2">
+                <button id="delete" class="btn btn-danger" (click)="onDelete(review)" *ngIf="authService.roles.includes('ROLE_ADMIN')">Delete</button>
+                <div class="row">
+                    <header class="display-6 small m-1">Author: {{review.author}}</header>
+                    <app-trip-rating [writeOnly]="false" [trip]="trip" [ratingToShow]="review.rating" (ratingChosen)="updateRating($event)" class="ms-1"></app-trip-rating>
+                    <header class="display-6 small m-1" >{{ review.date }}</header>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <header class="display-6 smaller m-1">{{review.comment}}</header>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="trip.reviews.length === 0">
+                <header class="display-6 text-center text-warning">No reviews yet</header>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container  d-flex flex-column justify-content-around align-items-center"
+    [ngClass]="getClassNames()">
+
+    <a [routerLink]="['/trip', trip._id]" *ngIf="authService.isLoggedIn">
+        <img [src]="trip.imageSources[0]" alt="trip photo">
+    </a>
+    <img [src]="trip.imageSources[0]" alt="trip photo" *ngIf="!authService.isLoggedIn">
+    
+    <!-- <button id="delete" class="btn btn-danger" (click)="onDelete(trip)">Delete</button> -->
+    <header class="display-6">{{trip.name | uppercase}}</header>
+    <div class="w-100 d-flex justify-content-around">
+        <p>{{trip.country | uppercase }}</p>
+        <p>{{priceToShow}} {{selectedCurrency}}</p>
+        <select (ngModelChange)="onSelectChange($event)" [(ngModel)]="selectedCurrency" class="form-select form-select-sm">
+            <option selected>PLN</option>
+            <option>$</option>
+            <option>&#8364;</option>
+        </select>
+    </div>
+    <p><i class="fa fa-calendar"></i> {{trip.dateStart}}-{{trip.dateEnd}}</p>
+    <p class="description">{{trip.description}}</p>
+    <!-- <div class="description">{{trip.description}}</div> -->
+    <div>
+        <app-trip-rating [readOnly]="true" [writeOnly]="false" [trip]="trip"></app-trip-rating>
+    </div>
+
+    <div class="w-100">
+        <div class="d-flex justify-content-around align-items-center mb-1">
+            <p class="places" [ngStyle]="{'color': trip.availablePlaces > 3 ? 'green' : 'orange'}" *ngIf="trip.availablePlaces > 0">places left: <span id="reservedNumber">{{trip.availablePlaces}}</span></p>
+            <p *ngIf="trip.availablePlaces == 0" class="text-danger places">booked out</p>
+            <button class="btn btn-primary" (click)="onPlusClick()" [disabled]="trip.availablePlaces == 0">+</button>
+            <button class="btn btn-danger" (click)="onMinusClick()" [disabled] = "trip.availablePlaces == 0 || trip.availablePlaces == trip.maxPlaces ? 'disabled' : null">-</button>
+        </div>
+    </div>
+</div>
