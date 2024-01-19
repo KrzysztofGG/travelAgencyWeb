@@ -59,7 +59,7 @@ export class TripsListComponent implements OnInit{
     dateStart: (new Date("01/01/1975")).toLocaleDateString("en-US"),
     dateEnd: (new Date("01/01/2030")).toLocaleDateString("en-US"),
     rating: [0, 1, 2, 3, 4, 5],
-    countries: ['']
+    countries: this.tripsService.getCountries()
   }
 
   ngOnInit(): void {
@@ -135,6 +135,7 @@ export class TripsListComponent implements OnInit{
     const tripsRated = tripsDated.filter(trip => {
       return this.filters.rating.indexOf(this.tripsService.getTripMeanRating(trip)) !== -1;
     })
+    console.log(this.filters);
     
     return tripsRated.filter(trip =>{
       return this.filters.countries.indexOf(trip.country) !== -1;

@@ -112,7 +112,7 @@ export class TripsService{
     this.http.delete(this.apiURL + _id, {headers}).subscribe(data => {
       this.refreshTrips();
     })
-
+    
     this.trips = this.trips.filter(t => t._id != _id);
     this.updateSpecialTrips();
   }

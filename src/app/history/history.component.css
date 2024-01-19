@@ -12,7 +12,7 @@ input{
     position: relative;
     border-radius: 20px;
     width: 450px;
-    /* height: ; */
+    height: 100vh;
     height: fit-content;
     text-align: center;
 

@@ -28,8 +28,8 @@
         <div class="d-flex justify-content-around align-items-center mb-1">
             <p class="places" [ngStyle]="{'color': trip.availablePlaces > 3 ? 'green' : 'orange'}" *ngIf="trip.availablePlaces > 0">places left: <span id="reservedNumber">{{trip.availablePlaces}}</span></p>
             <p *ngIf="trip.availablePlaces == 0" class="text-danger places">booked out</p>
-            <button class="btn btn-primary" (click)="onPlusClick()" [disabled]="trip.availablePlaces == 0">+</button>
-            <button class="btn btn-danger" (click)="onMinusClick()" [disabled] = "trip.availablePlaces == 0 || trip.availablePlaces == trip.maxPlaces ? 'disabled' : null">-</button>
+            <button class="btn btn-primary" *ngIf="authService.isLoggedIn" (click)="onPlusClick()" [disabled]="trip.availablePlaces == 0">+</button>
+            <button class="btn btn-danger" *ngIf="authService.isLoggedIn" (click)="onMinusClick()" [disabled] = "trip.availablePlaces == 0 || trip.availablePlaces == trip.maxPlaces ? 'disabled' : null">-</button>
         </div>
     </div>
 </div>
